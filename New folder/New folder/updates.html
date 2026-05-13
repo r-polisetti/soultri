@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bakery Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#17573b',
+            primaryDark: '#0f3d2a',
+            primaryLight: '#1f7a52',
+            cream: '#fffaf5',
+            softBg: '#f8f6f2',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-softBg text-gray-800">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold text-primary">
+        Sweet Crumbs
+      </h1>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html" class="hover:text-primary transition">Home</a>
+        <a href="about.html" class="hover:text-primary transition">About</a>
+        <a href="menu.html" class="hover:text-primary transition">Menu</a>
+        <a href="custom.html" class="hover:text-primary transition">Custom Orders</a>
+        <a href="updates.html" class="hover:text-primary transition">Updates</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="#" class="hidden md:inline-block bg-primary text-white px-5 py-2 rounded-full hover:bg-primaryDark transition">
+        Order Now
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-primary">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+
+  <section class="bg-cream">
+  <div class="max-w-7xl mx-auto px-6 py-16 text-center">
+
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      Bakery <span class="text-primary">Updates</span>
+    </h1>
+
+    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+      Stay updated with our latest cake launches, seasonal flavours, and special bakery creations.
+    </p>
+
+  </div>
+  </section>
+
+  <section class="bg-white py-10">
+    <div class="max-w-7xl mx-auto px-6">
+  
+      <h2 class="text-2xl font-bold mb-6">Featured Update</h2>
+  
+      <div class="bg-softBg rounded-2xl overflow-hidden shadow-md grid md:grid-cols-2">
+  
+        <img 
+          src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa"
+          class="w-full h-64 md:h-full object-cover"
+          alt="Featured cake"
+        />
+  
+        <div class="p-8 flex flex-col justify-center">
+  
+          <span class="text-primary text-sm font-medium">NEW LAUNCH</span>
+  
+          <h3 class="text-2xl font-bold mt-2 mb-3">
+            Belgian Chocolate Truffle Cake
+          </h3>
+  
+          <p class="text-gray-600 mb-4">
+            Rich, moist, and layered with premium Belgian chocolate. Perfect for birthdays and celebrations.
+            Now available for custom orders.
+          </p>
+  
+          <a href="https://wa.me/919876543210?text=Hi%20I%20want%20the%20Belgian%20Chocolate%20Truffle%20Cake"
+             class="inline-block bg-primary text-white px-5 py-2 rounded-full hover:bg-primaryDark transition w-fit">
+            Order Now
+          </a>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="bg-cream py-16">
+    <div class="max-w-7xl mx-auto px-6">
+  
+      <h2 class="text-2xl font-bold mb-8">Latest Updates</h2>
+  
+      <div class="grid md:grid-cols-3 gap-6">
+  
+        <!-- Post 1 -->
+        <div class="bg-white rounded-2xl shadow hover:shadow-md transition overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1519869325930-281384150729"
+               class="h-48 w-full object-cover" />
+  
+          <div class="p-5">
+            <span class="text-primary text-xs font-medium">NEW FLAVOUR</span>
+            <h3 class="font-semibold text-lg mt-2">Strawberry Cream Cupcakes</h3>
+            <p class="text-gray-600 text-sm mt-2">
+              Soft cupcakes topped with fresh strawberry cream frosting.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Post 2 -->
+        <div class="bg-white rounded-2xl shadow hover:shadow-md transition overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587"
+               class="h-48 w-full object-cover" />
+  
+          <div class="p-5">
+            <span class="text-primary text-xs font-medium">LIMITED EDITION</span>
+            <h3 class="font-semibold text-lg mt-2">Red Velvet Jar Cakes</h3>
+            <p class="text-gray-600 text-sm mt-2">
+              Perfect dessert jars for gifting and personal treats.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Post 3 -->
+        <div class="bg-white rounded-2xl shadow hover:shadow-md transition overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff"
+               class="h-48 w-full object-cover" />
+  
+          <div class="p-5">
+            <span class="text-primary text-xs font-medium">SEASONAL SPECIAL</span>
+            <h3 class="font-semibold text-lg mt-2">Festive Plum Cake</h3>
+            <p class="text-gray-600 text-sm mt-2">
+              Rich dry fruit plum cake available only during festive season.
+            </p>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="bg-primary text-white">
+    <div class="max-w-7xl mx-auto px-6 py-12 text-center">
+  
+      <h2 class="text-2xl font-bold mb-3">
+        Want something customized?
+      </h2>
+  
+      <p class="text-white/80 mb-6">
+        Chat with us on WhatsApp and we’ll bake it fresh for you.
+      </p>
+  
+      <a href="https://wa.me/919876543210"
+         class="inline-block bg-white text-primary px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">
+        Contact Us
+      </a>
+  
+    </div>
+  </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-primary text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
+      
+          <!-- Brand -->
+          <div>
+            <h2 class="text-2xl font-bold mb-4">Sweet Crumbs Bakery</h2>
+            <p class="text-white/80 text-sm">
+              Freshly baked goods made with love, passion, and the finest ingredients.
+            </p>
+          </div>
+      
+          <!-- Quick Links -->
+          <div>
+            <h3 class="font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-white/80 text-sm">
+              <li><a href="#" class="hover:text-white">Home</a></li>
+              <li><a href="#" class="hover:text-white">Menu</a></li>
+              <li><a href="#" class="hover:text-white">About</a></li>
+              <li><a href="#" class="hover:text-white">Contact</a></li>
+            </ul>
+          </div>
+      
+          <!-- Contact + Social -->
+          <div>
+            <h3 class="font-semibold mb-4">Contact</h3>
+      
+            <p class="text-white/80 text-sm mb-3">
+              123 Bakery Street, Your City
+            </p>
+      
+            <p class="text-white/80 text-sm mb-4">
+              +91 98765 43210
+            </p>
+      
+            <!-- Social Icons -->
+            <div class="flex gap-4 text-lg">
+              <a href="#" class="hover:text-white/80"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="hover:text-white/80"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="hover:text-white/80"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="hover:text-white/80"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+      
+        </div>
+      
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/20">
+          <div class="max-w-7xl mx-auto px-6 py-4 text-center text-sm text-white/80">
+      
+            <p>
+              © 2026 Sweet Crumbs Bakery. All rights reserved.
+            </p>
+      
+            <p class="mt-2">
+              Made with <span class="text-red-300">💚</span> by 👻
+            </p>
+      
+          </div>
+        </div>
+      
+      </footer>
+      
+    
+    </body>
+    </html>

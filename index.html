@@ -1,194 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Soultri – Opening Soon</title>
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/fav.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-  <!-- SEO Meta Tags -->
-    <meta name="google-site-verification" content="7Nml5k2a3ef3wrwo00qWU8bFvQB-jtHZwDA2WxbKpOU" />
-    <meta name="description" content="Soultri – Artisan bakery opening March 2026. Fresh bakes, warm moments.">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Soultri – Opening Soon">
-    <meta property="og:description" content="We're opening March 2026. Follow us for updates.">
-    <meta property="og:image" content="https://www.soultri.in/images/Soultri-nameboard.jpeg">
-    <meta property="og:url" content="https://www.soultri.in">
-    <meta name="theme-color" content="#17573b">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Soultri</title>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
-      font-family: 'Poppins', sans-serif;
-      overflow: hidden;
-    }
-
-    /* Background */
-    .background {
-      background: url('images/Soultri-nameboard.jpeg') no-repeat center center/cover;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      filter: blur(3px);
-      transform: scale(1.1);
-      z-index: -2;
-      animation: slowZoom 20s ease-in-out infinite alternate;
-    }
-
-    @keyframes slowZoom {
-      from { transform: scale(1.1); }
-      to { transform: scale(1.15); }
-    }
-
-    /* Brand Overlay */
-    .overlay {
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(
-        rgba(23, 87, 59, 0.75),
-        rgba(23, 87, 59, 0.85)
-      );
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 20px;
-      animation: fadeIn 1.5s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Logo */
-    .logo {
-      width: 380px;
-      margin-bottom: -10px;
-      display: block;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin: 0;
-    }
-
-    p {
-      font-size: 1.3rem;
-      font-weight: 300;
-      margin: 15px 0 40px 0;
-      letter-spacing: 1px;
-    }
-
-    /* Social Icons - Glass Buttons */
-    .icons {
-      display: flex;
-      gap: 25px;
-    }
-
-    .icons a {
-      width: 65px;
-      height: 65px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      color: white;
-      text-decoration: none;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(6px);
-      transition: 0.3s ease;
-    }
-
-    .icons a:hover {
-      background: white;
-      color: #17573b;
-      transform: translateY(-5px);
-    }
-
-    /* Mobile */
-    @media (max-width: 600px) {
-      .logo {
-        width: 240px;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .icons a {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
-      }
+    @font-face {
+      font-family: "Vibes";
+      src: url("./fonts/Vibes.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
     }
   </style>
+
+  <!-- ================= THEME CONFIG ================= -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#17573b',
+            primaryDark: '#0f3d2a',
+            primaryLight: '#1f7a52',
+            darkBg: '#0f3d2a',
+            textLight: '#ffffff',
+          },
+
+          fontFamily: {
+            vibes: ['Vibes'],
+          }
+        },
+      },
+    }
+  </script>
+
 </head>
-<body>
 
-  <div class="background"></div>
+<!-- ================= BODY ================= -->
+<body class="bg-primary text-white">
 
-  <div class="overlay">
-    
-    <img src="images/Soultri-logo (10).png" alt="Soultri Logo" class="logo">
+<!-- ================= NAVBAR ================= -->
+<header class="bg-primaryDark shadow-md relative">
 
-    <h1>We're Opening Soon</h1>
-    <p>March **, 2026</p>
-    <!--<p>
-      Soultri is your neighbourhood bakery near Allwyn X Road – Miyapur, Hyderabad 🍰✨
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-      We bake fresh cakes, pastries, and all things sweet with love, butter, and a little bit of magic 🪄🧁
+    <!-- Logo -->
+    <h1 class="text-5xl font-vibes text-white">
+      Soultri
+    </h1>
 
-      Warning: Walking past Soultri may cause sudden cake cravings, pastry daydreams, and uncontrollable “just one more bite” situations 🤭🍩
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-8 font-medium text-white/80">
+      <a href="index.html" class="hover:text-white transition">Home</a>
+      <a href="#" class="hover:text-white transition">About</a>
+      <a href="#" class="hover:text-white transition">Menu</a>
+      <a href="#" class="hover:text-white transition">Custom Orders</a>
+      <a href="#" class="hover:text-white transition">Updates</a>
+    </nav>
 
-      Made with attention to detail, sprinkled with happiness, and served with a smile 😄💛
+    <!-- CTA -->
+    <a href="https://wa.me/919876543210"
+       class="hidden md:inline-block bg-white text-primary px-5 py-2 rounded-full hover:bg-gray-100 transition">
+      Order Now
+    </a>
 
-      Come for the cake. Stay for the crumbs. 😌🍰
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="md:hidden text-white text-2xl">
+      ☰
+    </button>
 
-      Opening March 2026 – mark your calendars, or just your stomachs 🤤📅
-    </p>-->
+  </div>
 
-    <div class="icons">
-      <a href="https://maps.app.goo.gl/nBQGrVr47pE2fR7HA" target="_blank" rel="noopener">
-        <i class="fas fa-map-marker-alt"></i>
+  <!-- ================= MOBILE MENU ================= -->
+  <div id="mobileMenu"
+       class="hidden md:hidden absolute top-full left-0 w-full bg-primaryDark border-t border-white/10">
+
+    <div class="flex flex-col px-6 py-4 space-y-4 text-white/80">
+
+      <a href="index.html" class="hover:text-white">Home</a>
+      <a href="#" class="hover:text-white">About</a>
+      <a href="#" class="hover:text-white">Menu</a>
+      <a href="#" class="hover:text-white">Custom Orders</a>
+      <a href="#" class="hover:text-white">Updates</a>
+
+      <a href="https://wa.me/919876543210"
+         class="bg-white text-primary px-4 py-2 rounded-full text-center mt-2">
+        Order Now
       </a>
-      <a href="tel:+917842941616">
-        <i class="fas fa-phone-alt"></i>
-      </a>
-      <a href="https://instagram.com/soultri.india" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://facebook.com/soultri.in" target="_blank" rel="noopener">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://youtube.com/@Soultri-in" target="_blank" rel="noopener">
-        <i class="fab fa-youtube"></i>
-      </a>
+
     </div>
 
   </div>
+
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="py-20">
+
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- LEFT CONTENT -->
+    <div>
+
+      <span class="uppercase tracking-widest text-white/60 text-sm">
+        Quality First. Always.
+      </span>
+      
+      <h1 class="text-5xl md:text-6xl font-bold leading-tight mt-4 mb-6">
+        Desserts That Feel Expensive. <br> But they’re not 🙂
+      </h1>
+      
+      <p class="text-white/80 text-lg mb-8 max-w-xl">
+        We focus on quality ingredients, fresh baking, and desserts people can enjoy regularly not just occasionally.
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex flex-wrap gap-4">
+
+        <a href="menu.html"
+           class="bg-white text-primary px-6 py-3 rounded-full hover:bg-gray-100 transition font-medium">
+          Explore Menu
+        </a>
+
+        <a href="https://wa.me/919876543210"
+           class="border border-white/30 text-white px-6 py-3 rounded-full hover:bg-white hover:text-primary transition">
+          Contact Us
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="w-full overflow-hidden rounded-3xl shadow-2xl">
+
+      <img
+        src="images/berliner.png"
+        alt="Bakery"
+        class="w-full object-cover aspect-[4/3] md:aspect-[5/4] hover:scale-105 transition duration-700"
+      />
+    
+    </div>
+  </div>
+
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section class="py-16 bg-primaryLight">
+
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- IMAGE -->
+    <div>
+
+      <img
+        src="images/momo.png"
+        alt="Our Bakery"
+        class="rounded-3xl shadow-xl w-full object-cover"
+      />
+
+    </div>
+
+ <!-- CONTENT -->
+<div>
+
+  <h2 class="text-4xl md:text-5xl font-bold mb-6">
+    What We Do 🤔
+  </h2>
+  
+  <p class="text-white/90 text-lg leading-relaxed bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-sm mb-8">
+    Soultri focuses on good desserts made with quality ingredients and fairly priced, so you can enjoy them without thinking twice 🧁🙂
+  </p>
+
+  <!-- STATS (NOW CARD STYLE GRID) -->
+  <div class="grid grid-cols-2 gap-6 mb-8">
+
+    <div class="bg-white text-gray-800 rounded-3xl p-6 text-center shadow-lg hover:scale-105 transition duration-300">
+
+      <div class="text-4xl mb-3">🍩</div>
+
+      <h3 class="text-xl font-bold text-primary">
+        Fresh & Simple
+      </h3>
+
+      <p class="text-gray-600 text-sm mt-2">
+        Made with quality ingredients
+      </p>
+
+    </div>
+
+    <div class="bg-white text-gray-800 rounded-3xl p-6 text-center shadow-lg hover:scale-105 transition duration-300">
+
+      <div class="text-4xl mb-3">🍫</div>
+    
+      <h3 class="text-xl font-bold text-primary">
+        Real Couverture
+      </h3>
+    
+      <p class="text-gray-600 text-sm mt-2">
+        Made with 100% couverture chocolate
+      </p>
+    
+    </div>
+
+    <div class="bg-white text-gray-800 rounded-3xl p-6 text-center shadow-lg hover:scale-105 transition duration-300">
+
+      <div class="text-4xl mb-3">🥐</div>
+
+      <h3 class="text-xl font-bold text-primary">
+        Quality Focus
+      </h3>
+
+      <p class="text-gray-600 text-sm mt-2">
+        Ingredients you can trust
+      </p>
+
+    </div>
+
+    <div class="bg-white text-gray-800 rounded-3xl p-6 text-center shadow-lg hover:scale-105 transition duration-300">
+
+      <div class="text-4xl mb-3">🙂</div>
+
+      <h3 class="text-xl font-bold text-primary">
+        Fair Pricing
+      </h3>
+
+      <p class="text-gray-600 text-sm mt-2">
+        Worth every bite
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section class="py-16">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        Come Say Hi 👋
+      </h2>
+
+      <p class="text-white/80 text-lg">
+        Fresh desserts, good vibes, and something sweet always waiting for you 🧁
+      </p>
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+
+      <!-- LEFT -->
+      <div class="space-y-5">
+
+        <!-- ADDRESS -->
+        <div class="bg-white text-gray-800 rounded-3xl p-6 shadow-lg flex gap-4 items-start hover:scale-[1.02] transition">
+
+          <i class="fas fa-map-marker-alt text-primary text-xl mt-1 shrink-0"></i>
+
+          <div class="w-full">
+
+            <h3 class="font-semibold mb-2">Address</h3>
+
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Shop no: 7, Near Indian Oil Petrol Bunk, Sai Ram Towers Road, Vinayaka Nagar, Hafeezpet - Alwynn X Road, Hyderabad - 500049, IN. 
+            </p>
+
+            <a href="https://maps.app.goo.gl/AcLEugv26sGWD4kp7"
+               target="_blank"
+               class="inline-flex bg-primary text-white px-4 py-2 rounded-full text-sm hover:bg-primaryDark transition">
+              Get Directions
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- PHONE -->
+        <div class="bg-white text-gray-800 rounded-3xl p-6 shadow-lg flex gap-4 items-center hover:scale-[1.02] transition">
+
+          <i class="fas fa-phone-alt text-primary text-xl shrink-0"></i>
+
+          <div class="w-full">
+
+            <h3 class="font-semibold mb-1">Phone</h3>
+
+            <a href="tel:+919876543210"
+               class="text-primary hover:underline break-words">
+              +91 78429 41616
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- INSTAGRAM -->
+        <div class="bg-white text-gray-800 rounded-3xl p-6 shadow-lg flex gap-4 items-center hover:scale-[1.02] transition">
+
+          <i class="fab fa-instagram text-primary text-xl shrink-0"></i>
+
+          <div class="w-full">
+
+            <h3 class="font-semibold mb-1">Instagram</h3>
+
+            <a href="https://www.instagram.com/soultri.india"
+               class="text-primary hover:underline">
+              @soultri.india
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- WHATSAPP -->
+        <div class="bg-white text-gray-800 rounded-3xl p-6 shadow-lg flex gap-4 items-center hover:scale-[1.02] transition">
+
+          <i class="fab fa-whatsapp text-primary text-xl shrink-0"></i>
+
+          <div class="w-full">
+
+            <h3 class="font-semibold mb-1">WhatsApp</h3>
+
+            <a href="https://wa.me/+917842941616"
+               class="text-primary hover:underline">
+              Chat with us
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- HOURS -->
+        <div class="bg-white text-gray-800 rounded-3xl p-6 shadow-lg flex gap-4 items-start hover:scale-[1.02] transition">
+
+          <i class="fas fa-clock text-primary text-xl mt-1 shrink-0"></i>
+
+          <div class="w-full">
+
+            <h3 class="font-semibold mb-2">Opening Hours</h3>
+
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Weekends: 4 PM - 11 PM <br />
+              Weekdays: 5 PM – 10 PM 
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="w-full h-full">
+
+              <img
+                src="images/shop.png"
+                alt="Our Bakery Shop"
+                class="w-full h-full max-h-[700px] min-h-[300px] rounded-3xl shadow-2xl object-cover"
+              />
+            
+            </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="py-16 bg-primaryLight text-center">
+
+  <div class="max-w-3xl mx-auto px-6">
+
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">
+      Something Good is Waiting 🍰
+    </h2>
+
+    <p class="text-white/80 text-lg mb-8">
+      From quick cravings to celebration cakes, there’s always a reason to stop by Soultri 💚
+    </p>
+
+    <a href="https://wa.me/919876543210"
+       class="inline-block bg-white text-primary px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition">
+      Order on WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+<!-- ================= MOBILE MENU SCRIPT ================= -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-darkBg text-white">
+
+  <!-- Bottom -->
+  <div class="border-t border-white/10 text-center py-4 text-white/60 text-sm">
+    © 2026 Soultri Bakery
+  </div>
+
+</footer>
 
 </body>
 </html>

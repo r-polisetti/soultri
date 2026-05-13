@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bakery Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#17573b',
+            primaryDark: '#0f3d2a',
+            primaryLight: '#1f7a52',
+            cream: '#fffaf5',
+            softBg: '#f8f6f2',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-softBg text-gray-800">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold text-primary">
+        Sweet Crumbs
+      </h1>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html" class="hover:text-primary transition">Home</a>
+        <a href="about.html" class="hover:text-primary transition">About</a>
+        <a href="menu.html" class="hover:text-primary transition">Menu</a>
+        <a href="custom.html" class="hover:text-primary transition">Custom Orders</a>
+        <a href="updates.html" class="hover:text-primary transition">Updates</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="#" class="hidden md:inline-block bg-primary text-white px-5 py-2 rounded-full hover:bg-primaryDark transition">
+        Order Now
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-primary">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="bg-cream">
+    <div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+
+      <!-- Text Content -->
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+          Freshly Baked <span class="text-primary">Happiness</span> Everyday
+        </h2>
+
+        <p class="text-gray-600 mb-6 text-lg">
+          From warm breads to custom celebration cakes, we bake everything with love and the finest ingredients.
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-4">
+          <a href="#" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-primaryDark transition">
+            View Menu
+          </a>
+
+          <a href="#" class="border border-primary text-primary px-6 py-3 rounded-full hover:bg-primary hover:text-white transition">
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div>
+        <img 
+          src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec"
+          alt="Bakery"
+          class="rounded-2xl shadow-lg w-full object-cover"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ABOUT US ================= -->
+<section class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+  
+      <!-- Image -->
+      <div>
+        <img 
+          src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec"
+          alt="Our Bakery"
+          class="rounded-2xl shadow-lg w-full object-cover"
+        />
+      </div>
+  
+      <!-- Content -->
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          What do we do?
+        </h2>
+  
+        <p class="text-gray-600 mb-4">
+          What started as a small home kitchen has grown into a beloved neighborhood bakery. We believe that every loaf, every cake, and every pastry should bring comfort and joy.
+        </p>
+  
+        <p class="text-gray-600 mb-6">
+          Using time-tested recipes and the finest ingredients, we bake fresh every day to make your moments special—whether it’s a simple evening snack or a grand celebration.
+        </p>
+  
+        <!-- Highlights -->
+        <div class="grid grid-cols-2 gap-6 mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-primary">10+</h3>
+            <p class="text-gray-500 text-sm">Years of Experience</p>
+          </div>
+  
+          <div>
+            <h3 class="text-2xl font-bold text-primary">5000+</h3>
+            <p class="text-gray-500 text-sm">Happy Customers</p>
+          </div>
+  
+          <div>
+            <h3 class="text-2xl font-bold text-primary">100%</h3>
+            <p class="text-gray-500 text-sm">Fresh Ingredients</p>
+          </div>
+  
+          <div>
+            <h3 class="text-2xl font-bold text-primary">50+</h3>
+            <p class="text-gray-500 text-sm">Menu Items</p>
+          </div>
+        </div>
+  
+        <!-- CTA -->
+        <a href="#" class="inline-block bg-primary text-white px-6 py-3 rounded-full hover:bg-primaryDark transition">
+          Explore Our Menu
+        </a>
+  
+      </div>
+  
+    </div>
+  </section>
+
+ <!-- ================= CONTACT US ================= -->
+<section class="bg-cream">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+  
+      <!-- Heading -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Visit Our Bakery</h2>
+        <p class="text-gray-600">
+          Drop by for fresh bakes or reach out anytime—we're happy to help!
+        </p>
+      </div>
+  
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+  
+        <!-- LEFT: Contact Info -->
+        <div class="space-y-6">
+  
+          <!-- Address -->
+          <div class="flex items-start gap-3">
+            <i class="fas fa-map-marker-alt text-primary w-5 h-5 mt-1"></i>
+            <div>
+              <h3 class="font-semibold">Address</h3>
+              <p class="text-gray-600 mb-2">
+                123 Bakery Street, Your City, India
+              </p>
+  
+              <a 
+                href="https://www.google.com/maps?q=YOUR+BAKERY+LOCATION"
+                target="_blank"
+                class="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm hover:bg-primaryDark transition"
+              >
+                Get Directions
+              </a>
+            </div>
+          </div>
+  
+          <!-- Phone -->
+          <div class="flex items-start gap-3">
+            <i class="fas fa-phone-alt text-primary w-5 h-5 mt-1"></i>
+            <div>
+              <h3 class="font-semibold">Phone</h3>
+              <a href="tel:+919876543210" class="text-primary hover:underline">
+                +91 98765 43210
+              </a>
+            </div>
+          </div>
+  
+          <!-- Instagram -->
+          <div class="flex items-start gap-3">
+            <i class="fab fa-instagram text-primary w-5 h-5 mt-1"></i>
+            <div>
+              <h3 class="font-semibold">Instagram</h3>
+              <a href="#" class="text-primary hover:underline">
+                @yourbakery
+              </a>
+            </div>
+          </div>
+  
+          <!-- WhatsApp -->
+          <div class="flex items-start gap-3">
+            <i class="fab fa-whatsapp text-primary w-5 h-5 mt-1"></i>
+            <div>
+              <h3 class="font-semibold">WhatsApp</h3>
+              <a href="https://wa.me/919876543210" class="text-primary hover:underline">
+                Chat with us
+              </a>
+            </div>
+          </div>
+  
+          <!-- Business Hours -->
+          <div class="flex items-start gap-3">
+            <i class="fas fa-clock text-primary w-5 h-5 mt-1"></i>
+            <div>
+              <h3 class="font-semibold">Working Hours</h3>
+              <p class="text-gray-600 text-sm">
+                Mon–Sat: 9 AM – 9 PM <br />
+                Sunday: Closed
+              </p>
+            </div>
+          </div>
+  
+        </div>
+         
+        <!-- RIGHT: Shop Image -->
+        <div>
+          <img 
+            src="https://images.unsplash.com/photo-1509440159596-0249088772ff"
+            alt="Our Bakery Shop"
+            class="rounded-2xl shadow-lg w-full h-full object-cover"
+          />
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- ================= FOOTER ================= -->
+<footer class="bg-primary text-white">
+
+    <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
+  
+      <!-- Brand -->
+      <div>
+        <h2 class="text-2xl font-bold mb-4">Sweet Crumbs Bakery</h2>
+        <p class="text-white/80 text-sm">
+          Freshly baked goods made with love, passion, and the finest ingredients.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-white/80 text-sm">
+          <li><a href="#" class="hover:text-white">Home</a></li>
+          <li><a href="#" class="hover:text-white">Menu</a></li>
+          <li><a href="#" class="hover:text-white">About</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact + Social -->
+      <div>
+        <h3 class="font-semibold mb-4">Contact</h3>
+  
+        <p class="text-white/80 text-sm mb-3">
+          123 Bakery Street, Your City
+        </p>
+  
+        <p class="text-white/80 text-sm mb-4">
+          +91 98765 43210
+        </p>
+  
+        <!-- Social Icons -->
+        <div class="flex gap-4 text-lg">
+          <a href="#" class="hover:text-white/80"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-white/80"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-white/80"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="hover:text-white/80"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- Bottom Bar -->
+    <div class="border-t border-white/20">
+      <div class="max-w-7xl mx-auto px-6 py-4 text-center text-sm text-white/80">
+  
+        <p>
+          © 2026 Sweet Crumbs Bakery. All rights reserved.
+        </p>
+  
+        <p class="mt-2">
+          Made with <span class="text-red-300">💚</span> by 👻
+        </p>
+  
+      </div>
+    </div>
+  
+  </footer>
+  
+
+</body>
+</html>

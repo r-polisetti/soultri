@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bakery Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#17573b',
+            primaryDark: '#0f3d2a',
+            primaryLight: '#1f7a52',
+            cream: '#fffaf5',
+            softBg: '#f8f6f2',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-softBg text-gray-800">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold text-primary">
+        Sweet Crumbs
+      </h1>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html" class="hover:text-primary transition">Home</a>
+        <a href="about.html" class="hover:text-primary transition">About</a>
+        <a href="menu.html" class="hover:text-primary transition">Menu</a>
+        <a href="custom.html" class="hover:text-primary transition">Custom Orders</a>
+        <a href="updates.html" class="hover:text-primary transition">Updates</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="#" class="hidden md:inline-block bg-primary text-white px-5 py-2 rounded-full hover:bg-primaryDark transition">
+        Order Now
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-primary">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+<body class="bg-white text-gray-800">
+
+    <section class="bg-cream">
+        <div class="max-w-7xl mx-auto px-6 py-20 text-center">
+      
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Our Story, Baked with Love
+          </h1>
+      
+          <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+            From a small home kitchen to a beloved local bakery, our journey is built on passion, patience, and the joy of baking fresh every day.
+          </p>
+      
+        </div>
+      </section>
+
+      <section class="bg-white">
+        <div class="max-w-4xl mx-auto px-6 py-14 text-center">
+      
+          <h2 class="text-3xl font-bold mb-4">How It All Started</h2>
+      
+          <p class="text-gray-600">
+            Every bakery has a beginning. Ours started with simple recipes, a lot of experimentation, and a dream to bring fresh, handmade baked goods to our community.
+          </p>
+      
+        </div>
+      </section>
+
+      <section class="bg-softBg">
+        <div class="max-w-5xl mx-auto px-6 py-16">
+      
+          <div class="space-y-10 border-l-2 border-primary pl-6">
+      
+            <div>
+              <h3 class="text-xl font-bold text-primary">2015 — Humble Beginnings</h3>
+              <p class="text-gray-600 mt-2">
+                We started baking from home, sharing cakes and bread with friends and neighbors.
+              </p>
+            </div>
+      
+            <div>
+              <h3 class="text-xl font-bold text-primary">2017 — Growing Demand</h3>
+              <p class="text-gray-600 mt-2">
+                Orders increased through word of mouth, turning a passion into a small business.
+              </p>
+            </div>
+      
+            <div>
+              <h3 class="text-xl font-bold text-primary">2020 — First Bakery Store</h3>
+              <p class="text-gray-600 mt-2">
+                We opened our first physical bakery to serve our growing community daily.
+              </p>
+            </div>
+      
+            <div>
+              <h3 class="text-xl font-bold text-primary">Today — Baking Happiness Daily</h3>
+              <p class="text-gray-600 mt-2">
+                We continue to innovate while staying true to our roots: fresh, honest baking.
+              </p>
+            </div>
+      
+          </div>
+      
+        </div>
+      </section>
+
+      <section class="bg-white">
+        <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8 text-center">
+      
+          <div>
+            <h3 class="text-3xl font-bold text-primary">10+</h3>
+            <p class="text-gray-600">Years of Experience</p>
+          </div>
+      
+          <div>
+            <h3 class="text-3xl font-bold text-primary">5000+</h3>
+            <p class="text-gray-600">Happy Customers</p>
+          </div>
+      
+          <div>
+            <h3 class="text-3xl font-bold text-primary">100%</h3>
+            <p class="text-gray-600">Fresh Ingredients</p>
+          </div>
+      
+        </div>
+      </section>
+
+      <section class="bg-cream">
+        <div class="max-w-4xl mx-auto px-6 py-16 text-center">
+      
+          <h2 class="text-3xl font-bold mb-4">
+            Taste Our Story
+          </h2>
+      
+          <p class="text-gray-600 mb-6">
+            Every item we bake carries a piece of our journey. Explore our menu and experience it yourself.
+          </p>
+      
+          <a href="menu.html" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-green-900 transition">
+            View Menu
+          </a>
+      
+        </div>
+      </section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-primary text-white">
+
+    <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
+  
+      <!-- Brand -->
+      <div>
+        <h2 class="text-2xl font-bold mb-4">Sweet Crumbs Bakery</h2>
+        <p class="text-white/80 text-sm">
+          Freshly baked goods made with love, passion, and the finest ingredients.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-white/80 text-sm">
+          <li><a href="#" class="hover:text-white">Home</a></li>
+          <li><a href="#" class="hover:text-white">Menu</a></li>
+          <li><a href="#" class="hover:text-white">About</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact + Social -->
+      <div>
+        <h3 class="font-semibold mb-4">Contact</h3>
+  
+        <p class="text-white/80 text-sm mb-3">
+          123 Bakery Street, Your City
+        </p>
+  
+        <p class="text-white/80 text-sm mb-4">
+          +91 98765 43210
+        </p>
+  
+        <!-- Social Icons -->
+        <div class="flex gap-4 text-lg">
+          <a href="#" class="hover:text-white/80"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-white/80"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-white/80"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="hover:text-white/80"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- Bottom Bar -->
+    <div class="border-t border-white/20">
+      <div class="max-w-7xl mx-auto px-6 py-4 text-center text-sm text-white/80">
+  
+        <p>
+          © 2026 Sweet Crumbs Bakery. All rights reserved.
+        </p>
+  
+        <p class="mt-2">
+          Made with <span class="text-red-300">💚</span> by 👻
+        </p>
+  
+      </div>
+    </div>
+  
+  </footer>
+  
+
+</body>
+</html>

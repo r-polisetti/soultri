@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Custom Orders - Soultri Bakery</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    @font-face {
+      font-family: "Vibes";
+      src: url("./fonts/Vibes.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <!-- ================= THEME CONFIG ================= -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#17573b',
+            primaryDark: '#0f3d2a',
+            primaryLight: '#1f7a52',
+            darkBg: '#0f3d2a',
+            textLight: '#ffffff',
+          },
+
+          fontFamily: {
+            vibes: ['Vibes'],
+          }
+        },
+      },
+    }
+  </script>
+</head>
+
+<!-- ================= BODY ================= -->
+<body class="bg-primary text-white">
+
+<!-- ================= NAVBAR ================= -->
+<header class="bg-primaryDark shadow-md relative">
+
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <h1 class="text-5xl font-vibes text-white">
+      Soultri
+    </h1>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-8 font-medium text-white/80">
+      <a href="index.html" class="hover:text-white transition">Home</a>
+      <a href="about.html" class="hover:text-white transition">About</a>
+      <a href="menu.html" class="hover:text-white transition">Menu</a>
+      <a href="custom.html" class="text-white">Custom Orders</a>
+      <a href="updates.html" class="hover:text-white transition">Updates</a>
+    </nav>
+
+    <!-- CTA -->
+    <a href="https://wa.me/919876543210"
+       class="hidden md:inline-block bg-white text-primary px-5 py-2 rounded-full hover:bg-gray-100 transition">
+      Order Now
+    </a>
+
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="md:hidden text-white text-2xl">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- ================= MOBILE MENU ================= -->
+  <div id="mobileMenu"
+       class="hidden md:hidden absolute top-full left-0 w-full bg-primaryDark border-t border-white/10">
+
+    <div class="flex flex-col px-6 py-4 space-y-4 text-white/80">
+
+      <a href="index.html" class="hover:text-white">Home</a>
+      <a href="about.html" class="hover:text-white">About</a>
+      <a href="menu.html" class="hover:text-white">Menu</a>
+      <a href="custom.html" class="text-white">Custom Orders</a>
+      <a href="updates.html" class="hover:text-white">Updates</a>
+
+      <a href="https://wa.me/919876543210"
+         class="bg-white text-primary px-4 py-2 rounded-full text-center mt-2">
+        Order Now
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="py-20 text-center">
+
+  <div class="max-w-4xl mx-auto px-6">
+
+    <span class="uppercase tracking-widest text-white/60 text-sm">
+      Personalized Bakery Experience
+    </span>
+
+    <h1 class="text-5xl md:text-6xl font-bold mt-4 mb-6">
+      Custom <span class="text-white/70">Orders</span>
+    </h1>
+
+    <p class="text-white/80 text-lg">
+      From dream celebration cakes to dessert boxes and party treats — we create handcrafted bakery items tailored just for you.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ================= HOW TO ORDER ================= -->
+<section class="py-16 bg-primaryLight">
+
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="text-center mb-14">
+
+      <h2 class="text-4xl font-bold mb-4">
+        How To Place Your Order
+      </h2>
+
+      <p class="text-white/80 text-lg">
+        Simple, quick, and personalized through WhatsApp.
+      </p>
+
+    </div>
+
+    <div class="space-y-6">
+
+      <!-- STEP -->
+      <div class="bg-white text-gray-800 rounded-3xl p-8 shadow-lg flex gap-6 items-start">
+
+        <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shrink-0">
+          1
+        </div>
+
+        <div>
+
+          <h3 class="text-2xl font-bold mb-2">
+            Start a WhatsApp Chat
+          </h3>
+
+          <p class="text-gray-600">
+            Click the “Order Now” button and connect with us instantly on WhatsApp.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- STEP -->
+      <div class="bg-white text-gray-800 rounded-3xl p-8 shadow-lg flex gap-6 items-start">
+
+        <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shrink-0">
+          2
+        </div>
+
+        <div>
+
+          <h3 class="text-2xl font-bold mb-2">
+            Share Your Requirements
+          </h3>
+
+          <p class="text-gray-600">
+            Tell us your preferred flavor, size, theme, design inspiration, and delivery date.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- STEP -->
+      <div class="bg-white text-gray-800 rounded-3xl p-8 shadow-lg flex gap-6 items-start">
+
+        <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shrink-0">
+          3
+        </div>
+
+        <div>
+
+          <h3 class="text-2xl font-bold mb-2">
+            We Bake It Fresh
+          </h3>
+
+          <p class="text-gray-600">
+            Sit back while we craft your order with care, creativity, and premium ingredients.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="py-16">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        What We Create
+      </h2>
+
+      <p class="text-white/80 text-lg max-w-2xl mx-auto">
+        Handcrafted bakery creations customized for every celebration and occasion.
+      </p>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- CARD -->
+      <div class="bg-white text-gray-800 rounded-3xl p-8 text-center shadow-lg hover:scale-105 transition duration-300">
+
+        <div class="text-5xl mb-5">
+          🎂
+        </div>
+
+        <h3 class="text-2xl font-bold text-primary mb-4">
+          Custom Cakes
+        </h3>
+
+        <p class="text-gray-600">
+          Birthday cakes, wedding cakes, photo cakes, themed cakes, and luxury celebration cakes.
+        </p>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="bg-white text-gray-800 rounded-3xl p-8 text-center shadow-lg hover:scale-105 transition duration-300">
+
+        <div class="text-5xl mb-5">
+          🎉
+        </div>
+
+        <h3 class="text-2xl font-bold text-primary mb-4">
+          Party Orders
+        </h3>
+
+        <p class="text-gray-600">
+          Bulk dessert orders for birthdays, corporate events, celebrations, and festive occasions.
+        </p>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="bg-white text-gray-800 rounded-3xl p-8 text-center shadow-lg hover:scale-105 transition duration-300">
+
+        <div class="text-5xl mb-5">
+          🧁
+        </div>
+
+        <h3 class="text-2xl font-bold text-primary mb-4">
+          Dessert Boxes
+        </h3>
+
+        <p class="text-gray-600">
+          Brownies, cupcakes, pastries, cookies, and premium assorted dessert collections.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="py-16 bg-primaryLight">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        Our Custom Creations
+      </h2>
+
+      <p class="text-white/80 text-lg">
+        A glimpse into some of our handcrafted bakery masterpieces.
+      </p>
+
+    </div>
+
+    <!-- IMAGES -->
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <img
+        src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa"
+        class="rounded-3xl shadow-lg hover:scale-105 transition duration-300 object-cover h-72 w-full"
+        alt="Custom Cake"
+      />
+
+      <img
+        src="https://images.unsplash.com/photo-1519869325930-281384150729"
+        class="rounded-3xl shadow-lg hover:scale-105 transition duration-300 object-cover h-72 w-full"
+        alt="Cupcakes"
+      />
+
+      <img
+        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587"
+        class="rounded-3xl shadow-lg hover:scale-105 transition duration-300 object-cover h-72 w-full"
+        alt="Dessert"
+      />
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="py-20 text-center">
+
+  <div class="max-w-3xl mx-auto px-6">
+
+    <h2 class="text-4xl md:text-5xl font-bold mb-5">
+      Ready To Order?
+    </h2>
+
+    <p class="text-white/80 text-lg mb-8">
+      Chat with us on WhatsApp and let’s create something delicious and unforgettable together.
+    </p>
+
+    <a href="https://wa.me/919876543210"
+       class="inline-block bg-white text-primary px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition">
+      Order on WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+<!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+<a href="https://wa.me/919876543210"
+   class="fixed bottom-6 right-6 bg-white text-primary px-5 py-3 rounded-full shadow-xl hover:bg-gray-100 transition font-medium z-50">
+  💬 Order Now
+</a>
+
+<!-- ================= MOBILE MENU SCRIPT ================= -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-darkBg text-white">
+
+  <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
+
+    <!-- Brand -->
+    <div>
+
+      <h2 class="text-2xl font-bold mb-4">
+        Soultri Bakery
+      </h2>
+
+      <p class="text-white/70 text-sm">
+        Freshly baked goods made with love, passion, and the finest ingredients.
+      </p>
+
+    </div>
+
+    <!-- Links -->
+    <div>
+
+      <h3 class="font-semibold mb-4">
+        Quick Links
+      </h3>
+
+      <ul class="space-y-2 text-white/70 text-sm">
+        <li><a href="index.html" class="hover:text-white">Home</a></li>
+        <li><a href="menu.html" class="hover:text-white">Menu</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="custom.html" class="hover:text-white">Custom Orders</a></li>
+      </ul>
+
+    </div>
+
+    <!-- Contact -->
+    <div>
+
+      <h3 class="font-semibold mb-4">
+        Contact
+      </h3>
+
+      <p class="text-white/70 text-sm mb-3">
+        123 Bakery Street
+      </p>
+
+      <p class="text-white/70 text-sm mb-4">
+        +91 98765 43210
+      </p>
+
+      <!-- Social -->
+      <div class="flex gap-4 text-lg">
+
+        <a href="#" class="hover:text-white">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#" class="hover:text-white">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="#" class="hover:text-white">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="https://wa.me/919876543210" class="hover:text-white">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="border-t border-white/10 text-center py-4 text-white/60 text-sm">
+    © 2026 Soultri Bakery
+  </div>
+
+</footer>
+
+</body>
+</html>

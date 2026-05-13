@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Us - Soultri Bakery</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    @font-face {
+      font-family: "Vibes";
+      src: url("./fonts/Vibes.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <!-- ================= THEME CONFIG ================= -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#17573b',
+            primaryDark: '#0f3d2a',
+            primaryLight: '#1f7a52',
+            darkBg: '#0f3d2a',
+            textLight: '#ffffff',
+          },
+
+          fontFamily: {
+            vibes: ['Vibes'],
+          }
+        },
+      },
+    }
+  </script>
+</head>
+
+<!-- ================= BODY ================= -->
+<body class="bg-primary text-white">
+
+<!-- ================= NAVBAR ================= -->
+<header class="bg-primaryDark shadow-md relative">
+
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <h1 class="text-5xl font-vibes text-white">
+      Soultri
+    </h1>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-8 font-medium text-white/80">
+      <a href="index.html" class="hover:text-white transition">Home</a>
+      <a href="about.html" class="text-white">About</a>
+      <a href="menu.html" class="hover:text-white transition">Menu</a>
+      <a href="custom.html" class="hover:text-white transition">Custom Orders</a>
+      <a href="updates.html" class="hover:text-white transition">Updates</a>
+    </nav>
+
+    <!-- CTA -->
+    <a href="https://wa.me/919876543210"
+       class="hidden md:inline-block bg-white text-primary px-5 py-2 rounded-full hover:bg-gray-100 transition">
+      Order Now
+    </a>
+
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="md:hidden text-white text-2xl">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- ================= MOBILE MENU ================= -->
+  <div id="mobileMenu"
+       class="hidden md:hidden absolute top-full left-0 w-full bg-primaryDark border-t border-white/10">
+
+    <div class="flex flex-col px-6 py-4 space-y-4 text-white/80">
+
+      <a href="index.html" class="hover:text-white">Home</a>
+      <a href="about.html" class="text-white">About</a>
+      <a href="menu.html" class="hover:text-white">Menu</a>
+      <a href="custom.html" class="hover:text-white">Custom Orders</a>
+      <a href="updates.html" class="hover:text-white">Updates</a>
+
+      <a href="https://wa.me/919876543210"
+         class="bg-white text-primary px-4 py-2 rounded-full text-center mt-2">
+        Order Now
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="py-20 text-center">
+
+  <div class="max-w-4xl mx-auto px-6">
+
+    <span class="uppercase tracking-widest text-white/60 text-sm">
+      Our Journey
+    </span>
+
+    <h1 class="text-5xl md:text-6xl font-bold mt-4 mb-6">
+      Our Story, <span class="text-white/70">Baked with Love</span>
+    </h1>
+
+    <p class="text-white/80 text-lg max-w-3xl mx-auto">
+      From a small home kitchen to a growing bakery brand, Soultri was built on passion, patience, and the joy of creating desserts that bring people together.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ================= STORY SECTION ================= -->
+<section class="py-16 bg-primaryLight">
+
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- IMAGE -->
+    <div>
+
+      <img
+        src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec"
+        alt="Soultri Bakery"
+        class="rounded-3xl shadow-2xl w-full object-cover"
+      />
+
+    </div>
+
+    <!-- CONTENT -->
+    <div>
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        How It All Started
+      </h2>
+
+      <p class="text-white/80 mb-4">
+        Every bakery has a beginning. Ours started with simple recipes, endless experimentation, and a dream to bring handmade baked goods to our community.
+      </p>
+
+      <p class="text-white/80 mb-4">
+        What began as baking for friends and family slowly turned into something much bigger — a place where every cake, pastry, and loaf carries a piece of our story.
+      </p>
+
+      <p class="text-white/80">
+        Today, Soultri continues to blend traditional baking techniques with modern creativity to craft unforgettable experiences.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= TIMELINE ================= -->
+<section class="py-16">
+
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="text-center mb-14">
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        Our Journey
+      </h2>
+
+      <p class="text-white/80 text-lg">
+        A timeline of milestones that shaped Soultri into what it is today.
+      </p>
+
+    </div>
+
+    <div class="space-y-8 border-l-2 border-white/20 pl-8">
+
+      <!-- ITEM -->
+      <div class="bg-white text-gray-800 rounded-2xl p-6 shadow relative">
+
+        <div class="absolute -left-11 top-7 w-5 h-5 rounded-full bg-white border-4 border-primary"></div>
+
+        <h3 class="text-2xl font-bold text-primary mb-2">
+          2015 — Humble Beginnings
+        </h3>
+
+        <p class="text-gray-600">
+          We started baking from home, sharing cakes and fresh bread with friends and neighbors.
+        </p>
+
+      </div>
+
+      <!-- ITEM -->
+      <div class="bg-white text-gray-800 rounded-2xl p-6 shadow relative">
+
+        <div class="absolute -left-11 top-7 w-5 h-5 rounded-full bg-white border-4 border-primary"></div>
+
+        <h3 class="text-2xl font-bold text-primary mb-2">
+          2017 — Growing Demand
+        </h3>
+
+        <p class="text-gray-600">
+          Orders began increasing through word of mouth, turning our passion into a growing business.
+        </p>
+
+      </div>
+
+      <!-- ITEM -->
+      <div class="bg-white text-gray-800 rounded-2xl p-6 shadow relative">
+
+        <div class="absolute -left-11 top-7 w-5 h-5 rounded-full bg-white border-4 border-primary"></div>
+
+        <h3 class="text-2xl font-bold text-primary mb-2">
+          2020 — First Bakery Store
+        </h3>
+
+        <p class="text-gray-600">
+          We opened our first bakery store to serve our community with fresh baked creations every day.
+        </p>
+
+      </div>
+
+      <!-- ITEM -->
+      <div class="bg-white text-gray-800 rounded-2xl p-6 shadow relative">
+
+        <div class="absolute -left-11 top-7 w-5 h-5 rounded-full bg-white border-4 border-primary"></div>
+
+        <h3 class="text-2xl font-bold text-primary mb-2">
+          Today — Baking Happiness Daily
+        </h3>
+
+        <p class="text-gray-600">
+          Soultri continues to innovate while staying true to its roots: fresh, honest, handcrafted baking.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="py-16 bg-primaryLight">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+
+      <!-- CARD -->
+      <div class="bg-white text-gray-800 rounded-2xl p-8 shadow">
+
+        <h3 class="text-4xl font-bold text-primary mb-2">
+          10+
+        </h3>
+
+        <p class="text-gray-600">
+          Years of Experience
+        </p>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="bg-white text-gray-800 rounded-2xl p-8 shadow">
+
+        <h3 class="text-4xl font-bold text-primary mb-2">
+          5000+
+        </h3>
+
+        <p class="text-gray-600">
+          Happy Customers
+        </p>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="bg-white text-gray-800 rounded-2xl p-8 shadow">
+
+        <h3 class="text-4xl font-bold text-primary mb-2">
+          100%
+        </h3>
+
+        <p class="text-gray-600">
+          Fresh Ingredients
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= VALUES ================= -->
+<section class="py-16">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-14">
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        What We Believe In
+      </h2>
+
+      <p class="text-white/80 text-lg">
+        Every product at Soultri is guided by these values.
+      </p>
+
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- CARD -->
+      <div class="bg-white text-gray-800 rounded-2xl p-8 shadow">
+
+        <i class="fas fa-heart text-primary text-3xl mb-5"></i>
+
+        <h3 class="text-2xl font-bold mb-3">
+          Passion
+        </h3>
+
+        <p class="text-gray-600">
+          We pour creativity and care into every cake, pastry, and dessert we create.
+        </p>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="bg-white text-gray-800 rounded-2xl p-8 shadow">
+
+        <i class="fas fa-seedling text-primary text-3xl mb-5"></i>
+
+        <h3 class="text-2xl font-bold mb-3">
+          Freshness
+        </h3>
+
+        <p class="text-gray-600">
+          We use high-quality ingredients and bake fresh every single day.
+        </p>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="bg-white text-gray-800 rounded-2xl p-8 shadow">
+
+        <i class="fas fa-users text-primary text-3xl mb-5"></i>
+
+        <h3 class="text-2xl font-bold mb-3">
+          Community
+        </h3>
+
+        <p class="text-gray-600">
+          Soultri exists to create moments that bring people together through food.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="py-16 bg-primaryLight text-center">
+
+  <div class="max-w-3xl mx-auto px-6">
+
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">
+      Taste Our Story
+    </h2>
+
+    <p class="text-white/80 text-lg mb-8">
+      Every item we bake carries a piece of our journey. Explore our menu and experience it yourself.
+    </p>
+
+    <a href="menu.html"
+       class="inline-block bg-white text-primary px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition">
+      View Menu
+    </a>
+
+  </div>
+
+</section>
+
+<!-- ================= MOBILE MENU SCRIPT ================= -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-darkBg text-white">
+
+  <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
+
+    <!-- Brand -->
+    <div>
+
+      <h2 class="text-2xl font-bold mb-4">
+        Soultri Bakery
+      </h2>
+
+      <p class="text-white/70 text-sm">
+        Freshly baked goods made with love, passion, and the finest ingredients.
+      </p>
+
+    </div>
+
+    <!-- Links -->
+    <div>
+
+      <h3 class="font-semibold mb-4">
+        Quick Links
+      </h3>
+
+      <ul class="space-y-2 text-white/70 text-sm">
+        <li><a href="index.html" class="hover:text-white">Home</a></li>
+        <li><a href="menu.html" class="hover:text-white">Menu</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="custom.html" class="hover:text-white">Custom Orders</a></li>
+      </ul>
+
+    </div>
+
+    <!-- Contact -->
+    <div>
+
+      <h3 class="font-semibold mb-4">
+        Contact
+      </h3>
+
+      <p class="text-white/70 text-sm mb-3">
+        123 Bakery Street
+      </p>
+
+      <p class="text-white/70 text-sm mb-4">
+        +91 98765 43210
+      </p>
+
+      <!-- Social -->
+      <div class="flex gap-4 text-lg">
+
+        <a href="#" class="hover:text-white">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#" class="hover:text-white">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="#" class="hover:text-white">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="https://wa.me/919876543210" class="hover:text-white">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="border-t border-white/10 text-center py-4 text-white/60 text-sm">
+    © 2026 Soultri Bakery
+  </div>
+
+</footer>
+
+</body>
+</html>
