@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Soultri • Currently Baking 👨‍🍳</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom Font -->
+  <style>
+    @font-face {
+      font-family: "Vibes";
+      src: url("./fonts/Vibes.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <!-- ================= THEME CONFIG ================= -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#17573b',
+            primaryDark: '#0f3d2a',
+            primaryLight: '#1f7a52',
+            cream: '#f8f5ef',
+          },
+
+          fontFamily: {
+            vibes: ['Vibes'],
+          },
+
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.10)',
+          },
+
+          animation: {
+            float: 'float 5s ease-in-out infinite',
+            fade: 'fade 1s ease forwards',
+          },
+
+          keyframes: {
+            float: {
+              '0%, 100%': {
+                transform: 'translateY(0px)',
+              },
+              '50%': {
+                transform: 'translateY(-12px)',
+              },
+            },
+
+            fade: {
+              '0%': {
+                opacity: 0,
+                transform: 'translateY(20px)',
+              },
+
+              '100%': {
+                opacity: 1,
+                transform: 'translateY(0px)',
+              },
+            },
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<!-- ================= BODY ================= -->
+<body class="bg-primary text-white overflow-hidden">
+
+  <!-- ================= BACKGROUND DECOR ================= -->
+  <div class="absolute inset-0 overflow-hidden">
+
+    <!-- Gradient Glow -->
+    <div class="absolute top-[-100px] left-[-100px] w-[350px] h-[350px] bg-primaryLight opacity-30 blur-3xl rounded-full"></div>
+
+    <div class="absolute bottom-[-100px] right-[-100px] w-[350px] h-[350px] bg-white/10 blur-3xl rounded-full"></div>
+
+  </div>
+
+
+  <!-- ================= MAIN SECTION ================= -->
+  <section class="relative min-h-screen flex items-center justify-center px-6 py-16">
+
+    <div class="max-w-6xl w-full grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- ================= LEFT CONTENT ================= -->
+      <div class="text-center lg:text-left animate-fade">
+
+        <!-- Logo -->
+        <h1 class="text-6xl md:text-7xl font-vibes text-white mb-6">
+          Soultri
+        </h1>
+
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/10 backdrop-blur-sm px-5 py-2 rounded-full text-sm text-white/80 mb-8">
+          <span>🪴</span>
+          <span>Patisserie & Bakehouse</span>
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+          We’re Currently <br>
+          Baking Something Beautiful 👨‍🍳
+        </h2>
+
+        <!-- Description -->
+        <p class="text-white/75 text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10">
+          Soultri’s website is getting its final touches.
+          Come back in a little while for fresh desserts,
+          custom cakes, and sweet surprises 🙂🍰
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/917842941616"
+             class="bg-white text-primary px-7 py-4 rounded-full font-semibold hover:bg-gray-100 transition duration-300 shadow-soft flex items-center justify-center gap-3">
+
+            <i class="fab fa-whatsapp text-xl"></i>
+            Order on WhatsApp
+
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/soultri.india"
+             target="_blank"
+             class="border border-white/20 px-7 py-4 rounded-full hover:bg-white hover:text-primary transition duration-300 flex items-center justify-center gap-3">
+
+            <i class="fab fa-instagram text-xl"></i>
+            Follow Updates
+
+          </a>
+
+        </div>
+
+     </div>
+
+
+      <!-- ================= RIGHT IMAGE ================= -->
+      <div class="relative flex justify-center animate-float">
+
+        <!-- Glass Card -->
+        <div class="bg-white/10 border border-white/10 backdrop-blur-md p-4 rounded-[2rem] shadow-soft max-w-lg">
+
+          <img
+            src="images/berliner.png"
+            alt="Soultri Dessert"
+            class="rounded-[1.5rem] w-full object-cover"
+          />
+
+        </div>
+
+        <!-- Floating Badge -->
+        <div class="absolute -bottom-6 -left-6 bg-white text-primary px-6 py-4 rounded-2xl shadow-soft">
+
+          <p class="text-sm text-gray-500">
+            Freshly baked with
+          </p>
+
+          <h3 class="font-bold text-lg">
+            Quality Ingredients ✨
+          </h3>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
